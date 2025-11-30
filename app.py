@@ -110,11 +110,6 @@ def get_video_url():
 
     return jsonify({"url": presigned_url})
 
-@app.route("/api/write/data")
-def write_data():
-    encode = get_encoded_value()
-    return jsonify({"name": "write_data", "encoded": encoded_value})
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=os.getenv("FLASK_DEBUG") == "1")
