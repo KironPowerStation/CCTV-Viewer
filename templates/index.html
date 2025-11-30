@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KPS CCTV Viewer Beta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__title">
+        <h1>KPS CCTV Viewer Beta</h1>
+        <p>Internal surveillance feed — use responsibly.</p>
+      </div>
+      <div class="hero__badge">KPS Internal Only</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <div class="panel__header">
+          <h2>Available Footage</h2>
+          <div id="status" class="status">Loading library...</div>
+        </div>
+        <ul id="video-list" class="video-list"></ul>
+      </section>
+
+      <section class="panel player">
+        <div class="panel__header">
+          <h2 id="current-title">Select a clip</h2>
+        </div>
+        <video id="player" controls preload="metadata"></video>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
