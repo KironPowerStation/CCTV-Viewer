@@ -12,6 +12,8 @@ load_dotenv()
 
 app = Flask(__name__)
 
+## TODO: Move S3 client creation to a separate module if the app grows larger.
+## TODO: Add management of different environments (dev, staging, prod) with separate configs. 
 
 def get_s3_client():
     """Create an S3 client using environment configuration.
